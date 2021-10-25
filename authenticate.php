@@ -2,7 +2,7 @@
   
   $password = $_POST['pwd'];
   
-  if($password === "NewPOLLSavetheCIAplus"){
+  if($password === "Password"){
     echo "Success";
   }
   else {
