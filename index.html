@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang=”en”>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sharing Opinions UI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/style/index.css">
+  </head>
+  
+    <body>
+      <h2 id = "about" style="text-align: center">Sharing Opinions UI</h2><br><br>
+      <div id = "menu" class="tabs disable">
+        <button id="q1" onclick="switchTab(event, 'T1')" class="btn">T1</button>
+        <button id="q2" onclick="switchTab(event, 'T2')" class="btn">T2</button>
+        <button id="q3" onclick="switchTab(event, 'T3')" class="btn">T3</button>
+        <button id="q4" onclick="switchTab(event, 'T4')" class="btn">T4</button>
+        <button id="q5" onclick="switchTab(event, 'T5')" class="btn">T5</button>
+        <button id="q6" onclick="switchTab(event, 'T6')" class="btn">T6</button>
+        <button id="q7" onclick="switchTab(event, 'T7')" class="btn">T7</button>
+        <button id="q8" onclick="switchTab(event, 'T8')" class="btn">Questions</button>
+        <button id="q9" onclick="switchTab(event, 'T9')" class="btn">Activate/Deactivate</button>
+        <button id="q10" onclick="switchTab(event, 'T10')" class="btn">Users</button>
+        <button id="q11" onclick="switchTab(event, 'T11')" class="btn">Answers</button>
+        <button id="q12" onclick="switchTab(event, 'T12')" class="btn">Stats</button>
+      </div><hr><br>
+      <form id="authentication" class="en ">
+        <label>Password</label>
+        <input id="pass" type="password" required placeholder="Password Required" autocomplete="on">
+        <input type="submit" value="Access Site">
+      </form>
+      <div id="T1" class="tab">
+        <form id="f1" onsubmit="insertQ('#f1', 'opts1', 'T1')" autocomplete="off">
+            
+              <label>Question</label>
+              <input type="text" placeholder="Required" required name="question" style="width:80%">
+              <input type="checkbox" checked name="active">
+              <label>Active</label><br>
+              <label style="padding-right: 8px">Options</label>
+              <input id="opt1" type="text" placeholder="Option" name="option" style="width:80%">
+              <input class="add" type="button" value="Add" onclick="add(event, 'opt1', 'opts1')">
+              <label>Or</label>
+              <input class="rem" type="button" value="Remove" onclick="rem(event, 'opt1', 'opts1')"><br>
+              <label>List Of Options</label>
+              <select id="opts1" required name="options" style="max-width 80%; width:250px;">
+              </select><br>
+
+              <input type="submit" value="Send">
+          </form>
+      </div>
+      <div id="T2" class="tab">
+        <form id="f2" onsubmit="insertQ2('#f2', 'opts2', 'T2')" autocomplete="off">
+            
+              <label>Question</label>
+              <input type="text" placeholder="Required" required name="question" style="width:80%">
+              <input type="checkbox" checked name="active">
+              <label>Active</label><br>
+              <input type="submit" value="Send">
+          </form>
+      </div>
+      <div id="T3" class="tab">
+        <form id="f3" onsubmit="insertQ('#f3', 'opts3', 'T3')" autocomplete="off">
+            
+              <label>Question</label>
+              <input type="text" placeholder="Required" required name="question" style="width:80%">
+              <input type="checkbox" checked name="active">
+              <label>Active</label><br>
+              <label style="padding-right: 8px">Options</label>
+              <input id="opt3" type="text" placeholder="Option" name="option" style="width:80%">
+              <input class="add" type="button" value="Add" onclick="add(event, 'opt3', 'opts3')">
+              <label>Or</label>
+              <input class="rem" type="button" value="Remove" onclick="rem(event, 'opt3', 'opts3')"><br>
+              <label>List Of Options</label>
+              <select id="opts3" required name="options" style="max-width 80%; width:250px;">
+              </select><br>
+
+              <input type="submit" value="Send">
+          </form>
+      </div>
+      <div id="T4" class="tab">
+        <form id="f4" onsubmit="insertQ2('#f4', 'opts4', 'T4')" autocomplete="off">
+            
+              <label>Question</label>
+              <input type="text" placeholder="Required" required name="question" style="width:80%">
+              <input type="checkbox" checked name="active">
+              <label>Active</label><br>
+              <input type="submit" value="Send">
+          </form>
+      </div>
+      <div id="T5" class="tab">
+        <form id="f5" onsubmit="insertQ('#f5', 'opts5', 'T5')" autocomplete="off">
+            
+              <label>Question</label>
+              <input type="text" placeholder="Required" required name="question" style="width:80%">
+              <input type="checkbox" checked name="active">
+              <label>Active</label><br>
+
+              <input type="submit" value="Send">
+          </form>
+      </div>
+      
+      <div id="T6" class="tab">
+        <form id="f6" onsubmit="insertQ2('#f6', 'opts6', 'T6')" autocomplete="off">
+            
+              <label>Question</label>
+              <input type="text" placeholder="Required" required name="question" style="width:80%">
+              <input type="checkbox" checked name="active">
+              <label>Active</label><br>
+              <input type="submit" value="Send">
+          </form>
+      </div>
+      <div id="T7" class="tab">
+        <form id="f7" onsubmit="insertQ('#f7', 'opts7', 'T7')" autocomplete="off">
+            
+              <label>Question</label>
+              <input type="text" placeholder="Required" required name="question" style="width:80%">
+              <input type="checkbox" checked name="active">
+              <label>Active</label><br>
+              <label style="padding-right: 8px">Options</label>
+              <input id="opt7" type="text" placeholder="Option" name="option" style="width:80%">
+              <input class="add" type="button" value="Add" onclick="add(event, 'opt7', 'opts7')">
+              <label>Or</label>
+              <input class="rem" type="button" value="Remove" onclick="rem(event, 'opt7', 'opts7')"><br>
+              <label>List Of Options</label>
+              <select id="opts7" required name="options" style="max-width 80%; width:250px;">
+              </select><br>
+
+              <input type="submit" value="Send">
+          </form>
+      </div>
+      <div id="T8" class="tab">
+      </div>
+      <div id="T9" class="tab">
+        <form id="f9" autocomplete="off">
+            
+              <label>Question ID</label>
+              <input type="number" min="1" placeholder="Required" required name="question id" style="width:50%" id="qId">
+              <input class="add" type="button" value="Activate" onclick="Chng(event, 1)">
+              <label>Or</label>
+              <input class="rem" type="button" value="Deactivate" onclick="Chng(event, 0)"><br>
+
+          </form>
+      </div>
+      <div id="T10" class="tab">
+      
+      </div>
+      <div id="T11" class="tab">
+      
+      </div>
+      <div id="T12" class="tab">
+        <form id="f12" autocomplete="off">
+              <label>Question ID</label>
+              <input type="number" min="1" placeholder="Required" required name="question id" style="width:50%" id="sId">
+              <input class="rem" type="button" value="Generate Stats" onclick="stats(event)"><br>
+        </form>
+      </div>
+      <div id="disp">
+      </div>
+      <script src="https://kit.fontawesome.com/f55d0a1ef8.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+      <script src="/js/init.js"></script>
+      
+  </body>
+  
+</html>
